@@ -4,11 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "node"
+    "test": "mocha controllerdatatest.js"
   },
   "author": "Taulant Sfishta",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.4",
+    "minimist": "^1.2.5",
     "mocha": "^9.0.0"
   }
 }

@@ -2,8 +2,6 @@ const getData = require("./data");
 
 const checkTheArgsParam = (param = "") => {
   if (param.search("--filter") > -1) {
-    console.log(param, "param");
-
     return filterDataByPattern(param);
   } else if (param.search("--count") > -1) {
     return countData();
@@ -15,7 +13,6 @@ const checkTheArgsParam = (param = "") => {
 
 const filterDataByPattern = async (filterparam = "") => {
   const patern = filterparam.split("=").pop();
-  console.log(patern, "patern");
   if (patern.length == 2) {
     let newData = new Array();
     await getData.data.forEach((value, key) => {
